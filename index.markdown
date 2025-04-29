@@ -4,4 +4,4 @@
 
 layout: home
 ---
-This is great!
+This is great! This is wonderful!
