@@ -49,10 +49,11 @@ jobs:
         run: |
           mkdir -p _category_pages
           rm -f _category_pages/*.md || true
-          grep -rhoP "^categories:\s*\[.*?\]" _posts | \
-            sed -E 's/^categories:\s*\[|\]//g' | \
+          grep -rhoP "^categories:\s*(\[.*\]|.*)" _posts | \
+            sed -E 's/^categories:\s*\[//;s/\]$//' | \
             tr ',' '\n' | \
-            sed 's/^[ \t]*//;s/[ \t]*$//' | \
+            tr ' ' '\n' | \
+            sed '/^$/d' | \
             sort | uniq | while read category; do
               slug=$(echo "$category" | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
               filename="_category_pages/${slug}.md"
