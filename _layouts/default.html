@@ -16,6 +16,24 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
       <div class="container">
         <a class="navbar-brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            {% for page in site.pages %}
+              {% if page.nav_exclude != true and page.title %}
+                <li class="nav-item">
+                  <a class="nav-link {% if page.url == page.url %}active{% endif %}" href="{{ page.url | relative_url }}">
+                    {{ page.title }}
+                  </a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
       </div>
     </nav>
 
@@ -23,12 +41,7 @@
       {{ content }}
     </main>
 
-    <!-- Footer -->
-    <footer>
-      <div class="text-center">&copy; 2025 Xandermar LLC | All Rights Reserved</div>
-    </footer>
-
-    <!-- Bootstrap JS -->
+    <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
