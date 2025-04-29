@@ -59,7 +59,7 @@ jobs:
               echo "layout: category" >> "$filename"
               echo "title: ${category^}" >> "$filename"
               echo "category: ${category}" >> "$filename"
-              echo "permalink: /category/${category}.html" >> "$filename"
+              echo "permalink: /categories/${category}/" >> "$filename"
               echo "---" >> "$filename"
           done
 
