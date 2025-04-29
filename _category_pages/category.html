@@ -1,0 +1,14 @@
+---
+layout: default
+title: Category
+permalink: /category/:name.html
+---
+
+<h1>Category: {{ page.category }}</h1>
+
+<ul>
+  {% assign cat = page.category | downcase %}
+  {% for post in site.categories[cat] %}
+    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
