@@ -64,6 +64,12 @@ jobs:
               echo "---" >> "$filename"
           done
 
+      - name: Debug generated category pages
+        run: |
+          echo "Generated category pages:"
+          ls -l _category_pages
+          cat _category_pages/*.md          
+
       - name: Build with Jekyll
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
