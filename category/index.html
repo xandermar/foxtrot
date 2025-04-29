@@ -1,0 +1,14 @@
+---
+layout: default
+---
+{% capture category_name %}{{ page.url | split: '/' | last }}{% endcapture %}
+
+<h1>Posts in category: {{ category_name }}</h1>
+
+<ul>
+  {% for post in site.categories[category_name] %}
+    <li>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
