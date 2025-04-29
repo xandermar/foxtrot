@@ -54,15 +54,15 @@ jobs:
             tr ',' '\n' | \
             sed 's/^[ \t]*//;s/[ \t]*$//' | \
             sort | uniq | while read category; do
-              filename="_category_pages/${category}.md"
+              slug=$(echo "$category" | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
+              filename="_category_pages/${slug}.md"
               echo "---" > "$filename"
               echo "layout: category" >> "$filename"
               echo "title: ${category^}" >> "$filename"
-              echo "category: ${category}" >> "$filename"
-              echo "permalink: /categories/${category}/" >> "$filename"
+              echo "category: $slug" >> "$filename"
+              echo "permalink: /categories/$slug/" >> "$filename"
               echo "---" >> "$filename"
           done
-
 
       - name: Build with Jekyll
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
