@@ -79,7 +79,7 @@
             <ul class="list-group list-group-flush">
               {% for post in site.posts limit:10 %}
                 <li class="list-group-item">
-                  <a href="{{ post.url | relative_url }}">{{ post.title }} ({{ post.date | date("F j, Y") }})</a>
+                  <a href="{{ post.url | relative_url }}">{{ post.title }}</a> ({{ post.date }})
                 </li>
               {% endfor %}
             </ul>
