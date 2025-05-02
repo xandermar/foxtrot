@@ -50,14 +50,14 @@
               <h2>{{ title }}</h2>
             {% endif %}
             {{ content }}
-          
+
             {% if page.categories %}
               <div class="mt-4">
                 <h5>Categories:</h5>
                 <ul class="list-inline">
                   {% for category in page.categories %}
                     <li class="list-inline-item">
-                      <a href="{{ '/categories/' | append: category | append: '/' | relative_url }}" class="badge bg-secondary text-decoration-none">
+                      <a href="{{ '/category/' | append: category | append: '.html' | relative_url }}" class="badge bg-secondary text-decoration-none">
                         {{ category }}
                       </a>
                     </li>
@@ -65,6 +65,7 @@
                 </ul>
               </div>
             {% endif %}
+
           </main>
         </div>
 
