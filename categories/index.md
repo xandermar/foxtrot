@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Post Categories
-permalink: /categories/
+permalink: /categories
+nav_order: 3
 ---
 
 <h1>All Categories</h1>
