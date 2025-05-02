@@ -2,7 +2,7 @@
 layout: default
 title: Portfolio
 permalink: /portfolio
-nav-link: 3
+nav_order: 3
 ---
 
 ## 🚀 Portfolio for Xandermar LLC
