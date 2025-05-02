@@ -4,19 +4,16 @@ title: Portfolio
 permalink: /portfolio
 nav-link: 3
 ---
-Based on your resume, here's a **professional, bold, and visually structured “Portfolio” page** for your website (Xandermar.com), highlighting your expertise, project history, and specialties:
 
----
-
-## 🚀 Portfolio – Dan Gibson / Xandermar LLC
+## 🚀 Portfolio for Xandermar LLC
 
 **AI Architect · Drupal Expert · Scalable Web Solutions**
 
 ---
 
-### 💡 About Me
+### 💡 Snapshot
 
-With over 20 years in software development, I specialize in building intelligent, scalable, and secure platforms that merge the power of **Drupal**, **Angular**, and **AI-driven analytics**. I’ve architected systems for federal agencies, Fortune 500 companies, and high-security environments using modern DevOps, cloud-native strategies, and custom APIs.
+With over 20 years in software development, we specialize in building intelligent, scalable, and secure platforms that merge the power of **Drupal**, **Angular**, and **AI-driven analytics**. We’ve architected systems for federal agencies, Fortune 500 companies, and high-security environments using modern DevOps, cloud-native strategies, and custom APIs.
 
 ---
 
@@ -93,4 +90,5 @@ With over 20 years in software development, I specialize in building intelligent
 
 If your organization demands **secure**, **data-smart**, and **scalable** web systems — let’s talk.
 
-👉 [LinkedIn](https://www.linkedin.com/company/xandermar-llc) | [GitHub](https://github.com/xandermar)
+👉 [LinkedIn](https://www.linkedin.com/company/xandermar-llc)
+👉 [GitHub](https://github.com/xandermar)
