@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<h1>Posts in {{ page.category }}</h1>
+<h1>Post Category: {{ page.category }}</h1>
 <ul>
   {% assign cat = page.category | downcase %}
   {% for post in site.categories[cat] %}
