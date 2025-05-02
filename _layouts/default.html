@@ -57,7 +57,7 @@
                 <ul class="list-inline">
                   {% for category in page.categories %}
                     <li class="list-inline-item">
-                      <a href="{{ '/category/' | append: category | append: '.html' | relative_url }}" class="badge bg-secondary text-decoration-none">
+                      <a href="{{ '/category/' | append: category | append: '/' | relative_url }}">
                         {{ category }}
                       </a>
                     </li>
