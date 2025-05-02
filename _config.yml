@@ -21,9 +21,9 @@
 title: Xandermar LLC
 email: xandermarllc@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Xandermar LLC is a Delaware-based IT consulting firm specializing in Drupal development, 
-  digital solutions, and web hosting for government and private clients. Founded in 2010, 
-  it provides full project lifecycle support, including development, design, and deployment, 
+  Xandermar LLC is a Delaware-based IT consulting firm specializing in Drupal development,
+  digital solutions, and web hosting for government and private clients. Founded in 2010,
+  it provides full project lifecycle support, including development, design, and deployment,
   with a focus on scalable and secure web platforms.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
@@ -34,7 +34,7 @@ github_username:  xandermar
 # theme: minima
 plugins:
   - jekyll-feed
-  
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -55,3 +55,8 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+collections:
+  category_pages:
+    output: true
+    permalink: /category/:name/
