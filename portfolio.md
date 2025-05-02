@@ -90,5 +90,5 @@ With over 20 years in software development, we specialize in building intelligen
 
 If your organization demands **secure**, **data-smart**, and **scalable** web systems — let’s talk.
 
-👉 [LinkedIn](https://www.linkedin.com/company/xandermar-llc)
-👉 [GitHub](https://github.com/xandermar)
+👉 [LinkedIn](https://www.linkedin.com/company/xandermar-llc){:target="_blank"}
+👉 [GitHub](https://github.com/xandermar){:target="_blank"}
