@@ -45,31 +45,10 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
-      - name: Generate category pages
+      - name: Run category generator script
         run: |
-          mkdir -p _category_pages
-          rm -f _category_pages/*.md || true
-          grep -rhoP "^categories:\s*(\[.*\]|.*)" _posts | \
-            sed -E 's/^categories:\s*\[//;s/\]$//' | \
-            tr ',' '\n' | \
-            tr ' ' '\n' | \
-            sed '/^$/d' | \
-            sort | uniq | while read category; do
-              slug=$(echo "$category" | tr '[:upper:]' '[:lower:]' | tr ' ' '-')
-              filename="_category_pages/${slug}.md"
-              echo "---" > "$filename"
-              echo "layout: category" >> "$filename"
-              echo "title: ${category^}" >> "$filename"
-              echo "category: $slug" >> "$filename"
-              echo "permalink: /categories/$slug/" >> "$filename"
-              echo "---" >> "$filename"
-          done
-
-      - name: Debug generated category pages
-        run: |
-          echo "Generated category pages:"
-          ls -l _category_pages
-          cat _category_pages/*.md          
+          chmod +x ./generate_category_pages.sh
+          ./generate_category_pages.sh
 
       - name: Build with Jekyll
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
