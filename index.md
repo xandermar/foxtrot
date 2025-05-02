@@ -33,4 +33,5 @@ As a veteran-owned consultancy, we move fast, execute cleanly, and never comprom
 Whether you're a government agency, large contractor, or growing startup, Xandermar LLC delivers digital solutions that move your goals forward — faster and smarter.
 
 👉 **Let’s Build Something That Lasts.**
-[Contact Us](/contact-us) | [Portfolio](/portfolio)
+[Contact Us](/contact-us)
+[Portfolio](/portfolio)
