@@ -2,7 +2,7 @@
 layout: default
 title: Post Categories
 permalink: /categories
-nav_order: 3
+nav_order: 10
 ---
 
 <h1>All Categories</h1>
