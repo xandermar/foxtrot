@@ -11,7 +11,7 @@ permalink: /categories/
   {% for category in categories %}
     {% assign category_name = category[0] %}
     <li>
-      <a href="{{ '/category/' | append: category_name | append: '.html' | relative_url }}">
+      <a href="{{ '/category/' | append: category_name | append: '/' | relative_url }}">
         {{ category_name }} ({{ category[1].size }})
       </a>
     </li>
