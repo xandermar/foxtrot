@@ -34,5 +34,4 @@ Whether you're a government agency, large contractor, or growing startup, Xander
 
 👉 **Let’s Build Something That Lasts.**
 
-[Contact Us](/contact-us)
-[Portfolio](/portfolio)
+[Contact Us](/contact-us) / [Portfolio](/portfolio)
