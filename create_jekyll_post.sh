@@ -94,13 +94,13 @@ get_first_image() {
 
 # Try topic-specific image
 QUERY=$(echo "$TOPIC" | sed 's/ /%20/g')
-IMAGE_RESPONSE=$(curl -s "https://pixabay.com/api/?key=$PIXABAY_API_KEY&q=$QUERY&image_type=photo&per_page=10&safesearch=true")
+IMAGE_RESPONSE=$(curl -s "https://pixabay.com/api/?key=$PIXABAY_API_KEY&q=$QUERY&image_type=photo&per_page=10&safesearch=true&orientation=landscape")
 RAW_IMAGE_URL=$(get_first_image "$IMAGE_RESPONSE")
 
 # Fallback to "technology" image
 if [[ -z "$RAW_IMAGE_URL" || "$RAW_IMAGE_URL" == "null" ]]; then
   echo "⚠️ No image found for topic. Using fallback: 'technology'"
-  FALLBACK_RESPONSE=$(curl -s "https://pixabay.com/api/?key=$PIXABAY_API_KEY&q=technology&image_type=photo&per_page=10&safesearch=true")
+  FALLBACK_RESPONSE=$(curl -s "https://pixabay.com/api/?key=$PIXABAY_API_KEY&q=technology&image_type=photo&per_page=10&safesearch=true&orientation=landscape")
   RAW_IMAGE_URL=$(get_first_image "$FALLBACK_RESPONSE")
 fi
 
