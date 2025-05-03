@@ -5,7 +5,7 @@ permalink: /about
 nav_order: 1
 ---
 
-![About Us Header](/assets/about-header.png)
+![About Us Header](/assets/about-header.png){: .img-fluid }
 
 ### And So It Began…
 
