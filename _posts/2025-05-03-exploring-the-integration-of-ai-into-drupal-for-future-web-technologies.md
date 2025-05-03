@@ -5,7 +5,7 @@ date: 2025-05-03
 categories: [ai, drupal, future-web-technologies]
 ---
 
-![Image](https://pixabay.com/get/gb4bc5ad4b4eb91a534bf32a7b34b6527c464c6f62ec867ac918dcbfbc8b695dfb4d0f4783f1e0bd0822cfb05bb8b23913059b8881f6406fa0c05c09f4ad7b463_1280.jpg){: .img-fluid }
+![Image](https://pixabay.com/get/gb4bc5ad4b4eb91a534bf32a7b34b6527c464c6f62ec867ac918dcbfbc8b695dfb4d0f4783f1e0bd0822cfb05bb8b23913059b8881f6406fa0c05c09f4ad7b463_1280.jpg){: .img-fluid style="max-height:720px; height:auto;" }
 
 
 # Introduction
@@ -18,7 +18,7 @@ Drupal, renowned for its flexibility and standard-driven approach, seems to be a
 There is a repository of modules in Drupal that serve as the bridge between Drupal and AI. Some notable ones include:
 
 * **Azure Cognitive Services API**: This module links Drupal with Microsoft’s intelligent APIs to build apps with powerful algorithms, using just a few lines of code.
-  
+
 * **Chatbot API**: This feature allows developers to create chatbots with natural language interfaces, evidently enhancing user experience.
 
 By harnessing these modules, developers can leverage AI's capabilities in their Drupal-based projects efficiently.

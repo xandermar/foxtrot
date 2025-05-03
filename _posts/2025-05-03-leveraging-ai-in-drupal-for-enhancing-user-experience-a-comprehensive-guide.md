@@ -5,17 +5,17 @@ date: 2025-05-03
 categories: [ai, drupal, user-experience]
 ---
 
-![Image](https://pixabay.com/get/ge8362525872cb28f13480f3b8fe953cec261e8dad27e4717f57b1b34eba4d27883bf96e81dcfe4dd13442a79a84c97702ad4b24aabfe8095806a2bb48ca009f3_1280.jpg){: .img-fluid }
+![Image](https://pixabay.com/get/ge8362525872cb28f13480f3b8fe953cec261e8dad27e4717f57b1b34eba4d27883bf96e81dcfe4dd13442a79a84c97702ad4b24aabfe8095806a2bb48ca009f3_1280.jpg){: .img-fluid style="max-height:720px; height:auto;" }
 
 # Introduction
 
 As technology evolves, AI (Artificial Intelligence) continues to prove to be a game-changer across multiple industries. For website developers too, AI has unlocked new possibilities in enhancing user experience and engagement. In this regard, Drupal, one of the top content management systems (CMS), is no exception. This post will explain how you can leverage AI in Drupal to take your website's user experience to new heights.
 
-# What Is AI in Drupal? 
+# What Is AI in Drupal?
 
 AI in Drupal signifies the integration of AI tools and technologies with the Drupal CMS. These consist of machine learning, natural language processing, chatbots, and much more. The implementations can vary from predictive analytics, content personalization, automated tagging, to language translation services.
 
-# Use Cases of AI in Drupal 
+# Use Cases of AI in Drupal
 
 ## Improving Content Personalization
 
