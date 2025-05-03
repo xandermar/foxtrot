@@ -5,16 +5,15 @@ if [ -f .env ]; then
   export $(grep -v '^#' .env | xargs)
 fi
 
-# Ensure API key is present
+# Ensure API key is set
 if [ -z "$OPENAI_API_KEY" ]; then
-  echo "Error: OPENAI_API_KEY not set."
+  echo "❌ Error: OPENAI_API_KEY not set."
   exit 1
 fi
 
-# Function to send prompt to OpenAI ChatGPT
+# ChatGPT query wrapper
 chatgpt() {
   local prompt="$1"
-
   curl -s https://api.openai.com/v1/chat/completions \
     -H "Authorization: Bearer $OPENAI_API_KEY" \
     -H "Content-Type: application/json" \
@@ -25,25 +24,30 @@ chatgpt() {
     }' | jq -r '.choices[0].message.content'
 }
 
-# Step 1: Get the trending topic
-echo "Getting topic..."
+# Step 1: Get trending topic
+echo "🔍 Getting topic..."
 topic_prompt="What is the most popular or trending topic today in Drupal, AI, or Web Technology? Respond with a concise topic title."
 TOPIC=$(chatgpt "$topic_prompt")
-echo "Topic: $TOPIC"
+echo "📝 Topic: $TOPIC"
 
-# Create a safe slug for the filename
+# Step 2: Normalize slug
 SLUG=$(echo "$TOPIC" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9]+/-/g' | sed 's/^-//;s/-$//')
-
-# Step 2: Generate Jekyll post content
-echo "Generating Jekyll post..."
-POST_CONTENT=$(chatgpt "Write a Jekyll-compatible Markdown blog post about the topic: \"$TOPIC\". Include YAML front matter with title, date (today), and categories. The content should be engaging and informative. Include at least one image with alt text.")
-
-# Step 3: Add class 'img-fluid' to all Markdown image tags
-POST_CONTENT_MODIFIED=$(echo "$POST_CONTENT" | sed -E 's|!\[([^\]]*)\]\(([^)]+)\)|<img src="\2" alt="\1" class="img-fluid">|g')
-
-# Step 4: Write the post to the _posts directory
 DATE=$(date '+%Y-%m-%d')
 FILENAME="_posts/${DATE}-${SLUG}.md"
-echo "$POST_CONTENT_MODIFIED" > "$FILENAME"
 
-echo "✅ Post created at $FILENAME"
+# Step 3: Prevent duplicate post
+if [ -f "$FILENAME" ]; then
+  echo "⚠️ Post already exists: $FILENAME"
+  exit 0
+fi
+
+# Step 4: Generate post
+echo "🧠 Generating Jekyll post..."
+POST_CONTENT=$(chatgpt "Write a Jekyll-compatible Markdown blog post about the topic: \"$TOPIC\". Include YAML front matter with title, date (today), and categories. The content should be engaging and informative. Include at least one image with alt text.")
+
+# Step 5: Convert Markdown images to HTML with img-fluid class
+POST_CONTENT_MODIFIED=$(echo "$POST_CONTENT" | sed -E 's|!\[([^\]]*)\]\(([^)]+)\)|<img src="\2" alt="\1" class="img-fluid">|g')
+
+# Step 6: Save post
+echo "$POST_CONTENT_MODIFIED" > "$FILENAME"
+echo "✅ Post created: $FILENAME"
