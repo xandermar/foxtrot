@@ -23,4 +23,4 @@ Xandermar’s concept began on the island of Oahu, Hawaii. While sitting on the 
 
 The slogan, “Knowledge is power, enthusiasm pulls the switch” comes from Libby Gibson. She had the quote on her refrigerator for years, and still does to this day. Every time there was a question of what to do next, she’d point at the slogan. The slogan has always inspired Xandermar to do more. Doing more is equally paired with enthusiasm. Without enthusiasm, the knowledge may be never utilized or never maximized to its potential. Alternatively, we can have all the enthusiasm in the world, but without educating ourselves it doesn’t matter. For knowledge is the engine that moves the train forward, the key to start the engine will be nothing other than enthusiasm.
 
-We’d love to hear from you!  [Schedule an appointment](https://calendly.com/xandermar/general-information)  with us now!
+We’d love to hear from you!  [Schedule an appointment](/contact-us)  with us now!
