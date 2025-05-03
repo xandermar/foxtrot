@@ -5,6 +5,8 @@ permalink: /about
 nav_order: 1
 ---
 
+[About Us Header](/assets/about-header.png)
+
 ### And So It Began…
 
 Xandermar was founded in 2010. We are a small business that caters to website development. We focus on websites, plain and simple. From drafting, branding and planning to multi-platform production, we deliver engaging and functional websites to our clients both small business and large Enterprise agencies.
