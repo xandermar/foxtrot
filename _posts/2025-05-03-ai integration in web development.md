@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "AI Integration in Web Development"
 date: 2022-03-22
 categories: AI Web-Development Technology
@@ -29,6 +29,6 @@ AI integration in web development is revolutionizing the way websites are built 
 
 As a web developer, embracing AI could open up new opportunities and possibilities. It's time to step into the future of web development with AI.
 
-Stay tuned for more exciting and informative posts on AI and web development. In the next blog post, we will delve deeper into the various AI tools available for web development. Don't miss it! 
+Stay tuned for more exciting and informative posts on AI and web development. In the next blog post, we will delve deeper into the various AI tools available for web development. Don't miss it!
 
 _Stay curious, keep learning!_
