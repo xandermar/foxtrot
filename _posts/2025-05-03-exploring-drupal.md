@@ -1,9 +1,9 @@
-——-
+–––
 layout: default
 title: “Exploring Drupal 10: A Major Leap Forward”
 date: 2025-05-03
 categories: drupal Jekyll
-——-
+–––
 Drupal 10, the latest version of the powerful open-source content management system, represents a major step forward in usability, performance, and modern development practices. Released in December 2022, it’s more accessible and future-ready than ever before.
 
 ## What’s New in Drupal 10? ✨
