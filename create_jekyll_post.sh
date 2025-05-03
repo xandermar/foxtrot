@@ -36,11 +36,14 @@ SLUG=$(echo "$TOPIC" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9]+/-/g' | sed
 
 # Step 2: Generate Jekyll post content
 echo "Generating Jekyll post..."
-POST_CONTENT=$(chatgpt "Write a Jekyll-compatible Markdown blog post about the topic: \"$TOPIC\". Include YAML front matter with title, date (today), and categories. The content should be engaging and informative.")
+POST_CONTENT=$(chatgpt "Write a Jekyll-compatible Markdown blog post about the topic: \"$TOPIC\". Include YAML front matter with title, date (today), and categories. The content should be engaging and informative. Include at least one image with alt text.")
 
-# Step 3: Write the post to the _posts directory
+# Step 3: Add class 'img-fluid' to all Markdown image tags
+POST_CONTENT_MODIFIED=$(echo "$POST_CONTENT" | sed -E 's|!\[([^\]]*)\]\(([^)]+)\)|<img src="\2" alt="\1" class="img-fluid">|g')
+
+# Step 4: Write the post to the _posts directory
 DATE=$(date '+%Y-%m-%d')
 FILENAME="_posts/${DATE}-${SLUG}.md"
-echo "$POST_CONTENT" > "$FILENAME"
+echo "$POST_CONTENT_MODIFIED" > "$FILENAME"
 
-echo "Post created at $FILENAME"
+echo "✅ Post created at $FILENAME"
