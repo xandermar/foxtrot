@@ -5,7 +5,7 @@ date: 2025-05-03
 categories: [ai, drupal, web-tech]
 ---
 
-![Image](https://pixabay.com/get/g411e3ced38965e8819c4a6f1efaad87109db3cca316738114c0fc73e61f83c23e2863f9cce2e3091397b442cf364018a7b9eed6d8e8f99eea433e5ae49ea7e01_1280.jpg){: .img-fluid style="max-height:720px; height:auto;" }
+![Image](https://pixabay.com/get/g872ee38c3fd1b7e6d5bea9a9644448a375975c493a85fc3c579c838dddcdc1c0073dd34e8bf9080e5cd9ad2e84f038b31a148c177f759700588634e9f57024a8_1280.jpg){: .img-fluid style="max-height:720px; height:auto;" }
 
 
 # Introduction
