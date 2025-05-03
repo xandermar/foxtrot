@@ -1,91 +1,96 @@
 #!/bin/bash
 
-# Load .env if present
-if [ -f .env ]; then
+# Load .env if it exists
+if [ -f ".env" ]; then
   export $(grep -v '^#' .env | xargs)
 fi
 
-# Ensure required API keys are available
-if [ -z "$OPENAI_API_KEY" ]; then
-  echo "❌ Error: OPENAI_API_KEY not set"
+# Check for required environment variables
+if [[ -z "$OPENAI_API_KEY" || -z "$PIXABAY_API_KEY" ]]; then
+  echo "Missing OPENAI_API_KEY or PIXABAY_API_KEY."
   exit 1
 fi
 
-if [ -z "$PIXABAY_API_KEY" ]; then
-  echo "❌ Error: PIXABAY_API_KEY not set"
-  exit 1
+# Get topic of the day from ChatGPT
+TOPIC_RESPONSE=$(curl -s https://api.openai.com/v1/chat/completions \
+  -H "Authorization: Bearer $OPENAI_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "gpt-4",
+    "messages": [{"role": "system", "content": "You are an expert content strategist."},
+                 {"role": "user", "content": "What is today'\''s most popular or trending topic in Drupal, AI, or Web Technology? Provide just the topic title."}],
+    "max_tokens": 50
+  }')
+
+TOPIC=$(echo "$TOPIC_RESPONSE" | jq -r '.choices[0].message.content' | sed 's/^"//;s/"$//' | tr -d '\n')
+
+echo "📌 Topic: $TOPIC"
+
+# Generate categories
+CATEGORY_RESPONSE=$(curl -s https://api.openai.com/v1/chat/completions \
+  -H "Authorization: Bearer $OPENAI_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d "{
+    \"model\": \"gpt-4\",
+    \"messages\": [
+      {\"role\": \"system\", \"content\": \"You are a taxonomy expert for technical blog posts.\"},
+      {\"role\": \"user\", \"content\": \"Based on the topic '$TOPIC', suggest 1 to 3 Jekyll-style lowercase slug categories (e.g. [ai, drupal, web-tech]). Return as a JSON array.\"}
+    ],
+    \"max_tokens\": 50
+  }")
+
+CATEGORIES=$(echo "$CATEGORY_RESPONSE" | jq -r '.choices[0].message.content' | sed 's/[][[:space:]]//g' | sed 's/,/, /g')
+
+
+# Generate blog content
+POST_RESPONSE=$(curl -s https://api.openai.com/v1/chat/completions \
+  -H "Authorization: Bearer $OPENAI_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d "{
+    \"model\": \"gpt-4\",
+    \"messages\": [
+      {\"role\": \"system\", \"content\": \"You are a technical blogger writing for a Jekyll-based site.\"},
+      {\"role\": \"user\", \"content\": \"Write a detailed, markdown-formatted blog post for Jekyll titled '$TOPIC' covering key aspects, use cases, and recent developments. Add section headings.\"}
+    ],
+    \"max_tokens\": 1200
+  }")
+
+POST_BODY=$(echo "$POST_RESPONSE" | jq -r '.choices[0].message.content' | sed '/^---/,/^---/d')
+
+# Get image from Pixabay
+QUERY=$(echo "$TOPIC" | sed 's/ /%20/g')
+IMAGE_RESPONSE=$(curl -s "https://pixabay.com/api/?key=$PIXABAY_API_KEY&q=$QUERY&image_type=photo&per_page=3&safesearch=true")
+
+RAW_IMAGE_URL=$(echo "$IMAGE_RESPONSE" | jq -r '.hits[0].largeImageURL')
+
+if [[ "$RAW_IMAGE_URL" == null || -z "$RAW_IMAGE_URL" ]]; then
+  IMAGE_LINE=""
+else
+  # Replace the pixabay.com domain with cdn.pixabay.com
+  IMAGE_URL=$(echo "$RAW_IMAGE_URL" | sed 's|https://pixabay.com/get/|https://cdn.pixabay.com/|')
+  IMAGE_LINE="![Image]($IMAGE_URL){: .img-fluid }"
 fi
 
+# Create filename
+DATE=$(date +%Y-%m-%d)
+SLUG=$(echo "$TOPIC" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9]/-/g' | sed 's/--*/-/g' | sed 's/-$//')
+FILENAME="_posts/$DATE-$SLUG.md"
 
-chatgpt() {
-  local prompt="$1"
-  curl -s https://api.openai.com/v1/chat/completions \
-    -H "Authorization: Bearer $OPENAI_API_KEY" \
-    -H "Content-Type: application/json" \
-    -d '{
-      "model": "gpt-4",
-      "messages": [{"role": "user", "content": "'"${prompt//\"/\\\"}"'"}],
-      "temperature": 0.7
-    }' | jq -r '.choices[0].message.content'
-}
+# Create post directory if it doesn't exist
+mkdir -p _posts
 
-# Step 1: Get topic
-echo "🔍 Getting topic..."
-topic_prompt="What is the most popular or trending topic today in Drupal, AI, or Web Technology? Respond with a concise topic title."
-TOPIC=$(chatgpt "$topic_prompt" | sed 's/^"//;s/"$//')
-echo "📝 Topic: $TOPIC"
+# Assemble full post
+cat <<EOF > "$FILENAME"
+---
+layout: post
+title: "$TOPIC"
+date: $DATE
+categories: [${CATEGORIES}]
+---
 
-# Step 2: Slug/date/filename
-SLUG=$(echo "$TOPIC" | tr '[:upper:]' '[:lower:]' | sed 's/[\"'\'']//g' | tr -cs 'a-z0-9' '-' | sed 's/^-//;s/-$//')
-DATE=$(date '+%Y-%m-%d')
-FILENAME="_posts/${DATE}-${SLUG}.md"
-mkdir -p assets/images
+$IMAGE_LINE
 
-# Step 3: Skip if file exists
-if [ -f "$FILENAME" ]; then
-  echo "⚠️ Post already exists: $FILENAME"
-  exit 0
-fi
+$POST_BODY
+EOF
 
-# Step 4: Generate post
-echo "🧠 Generating post content..."
-POST_RAW=$(chatgpt "Write a Jekyll-compatible Markdown blog post about the topic: \"$TOPIC\". Include YAML front matter with title, date (today), and categories. The content should be engaging and informative. Include at least one direct image URL (https://...) ending in .jpg or .png, using standard Markdown image syntax.")
-
-# Step 5: Fix front matter date
-POST_CONTENT=$(echo "$POST_RAW" | sed -E "s/^date: .*/date: $DATE/")
-
-# Fallback logic using Pixabay API
-if [ ! -s "$DEST_FS" ]; then
-  echo "❌ Download failed. Attempting fallback from Pixabay..."
-
-  QUERY=$(echo "$SLUG" | tr '-' '+')
-  PIXABAY_JSON=$(curl -s "https://pixabay.com/api/?key=$PIXABAY_API_KEY&q=$QUERY&image_type=photo&orientation=horizontal&safesearch=true&per_page=3")
-
-  FALLBACK_URL=$(echo "$PIXABAY_JSON" | jq -r '.hits[0].largeImageURL')
-
-  if [[ "$FALLBACK_URL" == "null" || -z "$FALLBACK_URL" ]]; then
-    echo "❌ No fallback image found on Pixabay for '$QUERY'"
-    continue
-  fi
-
-  FALLBACK_FILENAME="${SLUG}.jpg"
-  DEST_FS="assets/images/$FALLBACK_FILENAME"
-  DEST_MD="/assets/images/$FALLBACK_FILENAME"
-
-  echo "📥 Downloading fallback image from Pixabay: $FALLBACK_URL"
-  curl -sL "$FALLBACK_URL" -o "$DEST_FS"
-
-  if [ ! -s "$DEST_FS" ]; then
-    echo "❌ Failed to save fallback image from Pixabay."
-    continue
-  fi
-fi
-
-
-
-# Step 7: Replace image markdown with <img> + img-fluid class
-POST_CONTENT=$(echo "$POST_CONTENT" | sed -E 's|!\[([^\]]*)\]\((/assets/images/[^)]+)\s*"?([^"]*)"?\)|<img src="\2" alt="\1" title="\3" class="img-fluid">|g')
-
-# Step 8: Save the post
-echo "$POST_CONTENT" > "$FILENAME"
-echo "✅ Post created: $FILENAME"
+echo "✅ Post generated at: $FILENAME"
