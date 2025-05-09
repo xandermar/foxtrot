@@ -52,6 +52,14 @@ jobs:
           chmod +x ./generate_category_pages.sh
           ./generate_category_pages.sh
 
+      - name: Commit and push new post (if any)
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add .
+          git commit -m "Automated post creation [skip ci]" || echo "No changes to commit"
+          git push
+
       - name: Build with Jekyll
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
