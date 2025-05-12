@@ -5,7 +5,7 @@ date: 2025-05-03
 categories: [web-technology, drupal, ai]
 ---
 
-![Image](https://pixabay.com/get/g0c26e9a9f9cd6d4f9ead214152cfe6a9f6c885db72004c2545d25316827372108d697b2e5249a3d3ccb9e8c00ad30ea5dfdee53431eb471e33f143b68caabd87_1280.jpg){: .img-fluid style="max-height:720px; height:auto;" }
+![Image](/assets/e-learning.jpg){: .img-fluid style="max-height:720px; height:auto;" }
 
 # Exploring the Future of Web Technology: Integrating AI into Drupal
 
