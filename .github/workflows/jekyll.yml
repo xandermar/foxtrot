@@ -53,9 +53,12 @@ jobs:
           ./generate_category_pages.sh
 
       - name: Commit and push new post (if any)
+        env:
+          ACTIONS_TOKEN: ${{ secrets.ACTIONS_TOKEN }}      
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
+          git remote set-url origin https://x-access-token:${ACTIONS_TOKEN}@github.com/xandermar/foxtrot.git
           git add .
           git commit -m "Automated post creation [skip ci]" || echo "No changes to commit"
           git push
