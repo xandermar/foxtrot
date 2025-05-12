@@ -84,7 +84,10 @@ POST_BODY=$(echo "$POST_RESPONSE" | jq -r '.choices[0].message.content' \
   | sed '1{/^```.*$/d;}' \
   | sed '${/^```$/d;}')
 
-# ---------- IMAGE HANDLING ----------
+# ---------- IMAGE HANDLING (DOWNLOAD to /assets) ----------
+
+ASSETS_DIR="assets"
+mkdir -p "$ASSETS_DIR"
 
 # Helper: Get the first available image
 get_first_image() {
@@ -94,22 +97,29 @@ get_first_image() {
 
 # Try topic-specific image
 QUERY=$(echo "$TOPIC" | sed 's/ /%20/g')
-IMAGE_RESPONSE=$(curl -s "https://pixabay.com/api/?key=$PIXABAY_API_KEY&q=$QUERY&image_type=photo&per_page=10&safesearch=true&orientation=landscape")
+IMAGE_RESPONSE=$(curl -s "https://pixabay.com/api/?key=$PIXABAY_API_KEY&q=$QUERY&image_type=photo&per_page=10&safesearch=true")
 RAW_IMAGE_URL=$(get_first_image "$IMAGE_RESPONSE")
 
 # Fallback to "technology" image
 if [[ -z "$RAW_IMAGE_URL" || "$RAW_IMAGE_URL" == "null" ]]; then
   echo "⚠️ No image found for topic. Using fallback: 'technology'"
-  FALLBACK_RESPONSE=$(curl -s "https://pixabay.com/api/?key=$PIXABAY_API_KEY&q=technology&image_type=photo&per_page=10&safesearch=true&orientation=landscape")
+  FALLBACK_RESPONSE=$(curl -s "https://pixabay.com/api/?key=$PIXABAY_API_KEY&q=technology&image_type=photo&per_page=10&safesearch=true")
   RAW_IMAGE_URL=$(get_first_image "$FALLBACK_RESPONSE")
 fi
 
-# Final image markdown (enforce max-height: 720px)
+# Download image and use local asset reference
 if [[ -n "$RAW_IMAGE_URL" && "$RAW_IMAGE_URL" != "null" ]]; then
-  IMAGE_LINE="![Image]($RAW_IMAGE_URL){: .img-fluid style=\"max-height:720px; height:auto;\" }"
+  # Extract filename from URL
+  FILENAME_IMG=$(basename "$RAW_IMAGE_URL" | cut -d'?' -f1)
+  LOCAL_PATH="$ASSETS_DIR/$FILENAME_IMG"
+  curl -s -o "$LOCAL_PATH" "$RAW_IMAGE_URL"
+
+  # Use local reference
+  IMAGE_LINE="![Image](/$LOCAL_PATH){: .img-fluid style=\"max-height:720px; height:auto;\" }"
 else
   IMAGE_LINE=""
 fi
+
 
 # ---------- WRITE MARKDOWN FILE ----------
 
