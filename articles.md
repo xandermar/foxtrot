@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: Articles
 permalink: /articles
 nav_order: 4.1
