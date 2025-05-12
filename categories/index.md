@@ -3,6 +3,7 @@ layout: default
 title: Post Categories
 permalink: /categories
 nav_order: 10
+nav_exclude: true
 ---
 
 <h1>All Categories</h1>

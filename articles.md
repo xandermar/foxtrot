@@ -15,4 +15,4 @@ nav_order: 4.1
     </li>
   {% endfor %}
 </ul>
-
+<div class="mt-3">See <a href="/categories">Post Categories</a></div>
