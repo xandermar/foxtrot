@@ -1,0 +1,511 @@
+HTML
+HTML5
+doctype
+head
+body
+meta tag
+title tag
+anchor tag
+image tag
+table
+form
+input
+textarea
+label
+button
+fieldset
+legend
+select
+option
+iframe
+div
+span
+header
+footer
+section
+article
+nav
+main
+aside
+figure
+figcaption
+script tag
+noscript
+video tag
+audio tag
+source tag
+canvas
+svg
+blockquote
+code tag
+pre tag
+abbr
+cite
+address
+br tag
+hr tag
+CSS
+CSS3
+inline styles
+internal stylesheet
+external stylesheet
+selectors
+class selector
+id selector
+universal selector
+descendant selector
+pseudo-classes
+hover
+focus
+active
+nth-child
+first-child
+last-child
+media query
+responsive design
+flexbox
+grid layout
+box model
+margin
+padding
+border
+outline
+z-index
+position
+absolute
+relative
+fixed
+sticky
+display
+inline-block
+block
+none
+visibility
+overflow
+float
+clear
+font-family
+font-size
+line-height
+letter-spacing
+color
+background
+background-image
+background-size
+background-repeat
+background-position
+JavaScript
+JS
+ES6
+const
+let
+var
+function
+arrow function
+callback
+event listener
+DOM
+document.querySelector
+getElementById
+addEventListener
+setTimeout
+setInterval
+JSON
+fetch API
+promises
+async/await
+try/catch
+template literals
+spread operator
+rest parameter
+destructuring
+localStorage
+sessionStorage
+cookies
+closure
+scope
+hoisting
+this keyword
+constructor
+prototype
+class
+module
+import
+export
+webpack
+babel
+npm
+AJAX
+REST API
+GraphQL
+WebSocket
+Service Worker
+WebAssembly
+IndexedDB
+Canvas API
+Geolocation API
+Drag and Drop API
+Notification API
+IntersectionObserver
+MutationObserver
+requestAnimationFrame
+fetch
+CORS
+JWT
+OAuth
+OpenID
+user experience
+user interface
+UI design
+UX design
+wireframe
+mockup
+prototype
+affordance
+feedback
+heuristics
+consistency
+aesthetics
+accessibility
+ARIA roles
+contrast ratio
+WCAG
+keyboard navigation
+screen reader
+mobile-first design
+touch targets
+jQuery
+React
+Vue.js
+Angular
+Svelte
+Next.js
+Nuxt.js
+Gatsby
+Express.js
+Tailwind CSS
+Bootstrap
+Foundation
+Material UI
+Chakra UI
+Lodash
+Moment.js
+lazy loading
+image optimization
+minification
+compression
+CDN
+caching
+preloading
+critical rendering path
+render blocking
+time to first byte
+first contentful paint
+largest contentful paint
+cumulative layout shift
+interaction to next paint
+lighthouse
+VS Code
+Chrome DevTools
+firebug
+source maps
+debugger
+breakpoint
+console.log
+terminal
+CLI
+bash
+zsh
+package.json
+yarn
+pnpm
+node_modules
+environment variables
+dotenv
+git
+GitHub
+branch
+commit
+merge
+pull request
+rebase
+conflict resolution
+CI/CD
+Netlify
+Vercel
+Heroku
+Firebase
+Docker
+Kubernetes
+Nginx
+Apache
+FTP
+SFTP
+SSH
+DNS
+domain name
+SSL certificate
+HTTPS
+TLS
+web server
+load balancer
+reverse proxy
+static site
+serverless
+edge functions
+WordPress
+Drupal
+Joomla
+Magento
+Shopify
+Contentful
+Sanity.io
+Strapi
+headless CMS
+Jamstack
+static site generator
+Hugo
+Eleventy
+Jekyll
+markdown
+SEO
+meta description
+title tag
+alt attribute
+robots.txt
+sitemap.xml
+canonical tag
+hreflang
+schema.org
+structured data
+Google Analytics
+Google Tag Manager
+page speed
+bounce rate
+conversion rate
+CTR
+SERP
+backlink
+nofollow
+Figma
+Adobe XD
+Sketch
+InVision
+Photoshop
+SVG
+PNG
+JPEG
+WebP
+icon font
+font-face
+Google Fonts
+color palette
+hex code
+HSL
+RGB
+rem
+em
+px
+viewport units
+media queries
+dark mode
+light mode
+contrast
+typography
+mobile responsiveness
+cross-browser compatibility
+progressive enhancement
+graceful degradation
+single page application
+multi-page application
+content delivery
+microfrontend
+monorepo
+design system
+component library
+style guide
+code review
+unit test
+integration test
+end-to-end test
+Jest
+Cypress
+Playwright
+linter
+prettier
+code formatter
+ESLint
+type checking
+TypeScript
+flow
+BDD
+TDD
+Agile
+Scrum
+Kanban
+story points
+user story
+backlog
+sprint
+standup
+retrospective
+Drupal
+Drupal 7
+Drupal 8
+Drupal 9
+Drupal 10
+Drupal 11
+core module
+contributed module
+custom module
+hook
+hook_form_alter
+hook_menu
+hook_node_view
+hook_entity_presave
+hook_install
+hook_update_N
+hook_theme
+hook_init
+hook_help
+hook_permission
+hook_block_view
+hook_preprocess_HOOK
+hook_entity_type_build
+YAML
+routing.yml
+info.yml
+services.yml
+theme
+sub-theme
+Twig
+template file
+template_preprocess
+template suggestions
+Drupal render array
+form API
+form state
+submit handler
+validate handler
+entity
+node
+taxonomy
+term
+vocabulary
+field
+field type
+field widget
+field formatter
+content type
+view mode
+block
+custom block
+paragraphs
+media
+image style
+user
+role
+permission
+access control
+routing
+controller
+plugin
+service
+dependency injection
+container
+event subscriber
+event dispatcher
+kernel
+Drupal console
+Drush
+configuration
+config export
+config import
+configuration split
+config override
+state API
+cache
+cache tag
+cache context
+cache bin
+cache clear
+cron
+queue
+batch API
+pathauto
+token
+alias
+URL alias
+menu
+menu link
+breadcrumbs
+theme hook
+preprocess
+library
+attach_library
+JavaScript behavior
+once
+ajax API
+REST API
+serialization
+jsonapi
+GraphQL module
+composer
+composer.json
+vendor folder
+autoloading
+PSR-4
+Drupal coding standards
+phpstan-drupal
+phpcs
+simpletest
+PHPUnit
+functional test
+kernel test
+unit test
+Behat
+mink
+selenium
+entity query
+database query
+db_select
+entity_load
+entityTypeManager
+entityTypeRepository
+fieldable entity
+base field
+config entity
+content entity
+UUID
+migration
+migrate
+source plugin
+process plugin
+destination plugin
+feeds
+feeds tamper
+devel
+admin toolbar
+views
+views display
+contextual filters
+exposed filters
+view block
+view page
+override template
+Drupal multisite
+multilingual
+translation
+locale
+string override
+language negotiation
+t function
+markup
+form alter
+entity alter
+preprocess block
+preprocess page
+entity reference
+ckeditor
+text format
+input filter
