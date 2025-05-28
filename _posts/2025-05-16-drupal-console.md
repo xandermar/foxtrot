@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Drupal Console"
-date: 2025-05-27
+date: 2025-05-16
 categories: [drupal, web-development, cms-tools]
 ---
 
@@ -13,7 +13,7 @@ Drupal Console is a suite of tools designed to help you generate boilerplate cod
 
 The Drupal Console project uses Symfony Console and other third-party components to add a CLI (Command Line Interface) to Drupal, allowing for the generation of boilerplate code. It comes with a variety of commands and tasks for managing your Drupal site, becoming a crucial tool in every Drupal developer’s toolbox. Benefits range from learning how the framework operates, debugging systems, and speeding up administrative tasks.
 
-One of the most useful features for developers is the ability to generate module scaffolding with a single command. By using `generate:module`, you can quickly build a new custom module, including files such as `.info.yml`, `.module`, and more. For instance `drupal generate:controller` can generate a controller file, removing the work of creating these files manually. 
+One of the most useful features for developers is the ability to generate module scaffolding with a single command. By using `generate:module`, you can quickly build a new custom module, including files such as `.info.yml`, `.module`, and more. For instance `drupal generate:controller` can generate a controller file, removing the work of creating these files manually.
 
 It's not just module generation where Drupal Console shines, also comes packed with numerous debugger commands. For instance, `debug:theme` provides a list of all the themes, including base and theme engine, used by the Drupal installation. Similarly, `debug:container` will output a list of all the services available, which can be extremely helpful when developing new components that need to interact with other parts of the Drupal system.
 

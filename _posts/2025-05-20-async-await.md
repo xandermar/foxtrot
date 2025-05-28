@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Async/await"
-date: 2025-05-28
+date: 2025-05-20
 categories: [javascript, web-development, async-await]
 ---
 
@@ -15,7 +15,7 @@ Before understanding async/await, we should have knowledge of Promises. Promises
 
 Now, coming to async/await. These are just syntax sugar over Promises. They make your asynchronous code look more like synchronous/procedural code, which is easier for humans to understand. An async function returns a Promise. If the function throws an error, the Promise will be rejected. If the Promise resolves, the await operator is used to wait for the Promise's resolution.
 
-The keyword `async` before a function means that the function always returns a promise. If the code has a return path that doesn’t wrap the value in a Promise object, JavaScript automatically wraps it in a resolved promise with that value. 
+The keyword `async` before a function means that the function always returns a promise. If the code has a return path that doesn’t wrap the value in a Promise object, JavaScript automatically wraps it in a resolved promise with that value.
 
 Another use case of async/await is error handling. The `try/catch` construct works perfectly with async/await. If an error is thrown inside an async function, it can be caught and handled using a try/catch block. This makes error handling in our asynchronous code even better and cleaner.
 

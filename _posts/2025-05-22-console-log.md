@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Console.log"
-date: 2025-05-28
+date: 2025-05-22
 categories: [javascript, web-development, debugging]
 ---
 

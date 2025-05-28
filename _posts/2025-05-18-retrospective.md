@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Retrospective"
-date: 2025-05-27
+date: 2025-05-18
 categories: [project-management, agile-methodology, teamwork]
 ---
 

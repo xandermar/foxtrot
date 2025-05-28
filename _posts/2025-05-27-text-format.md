@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Text Format"
-date: 2025-05-28
+date: 2025-05-27
 categories: [programming, web-development, text-format]
 ---
 
@@ -9,9 +9,9 @@ categories: [programming, web-development, text-format]
 
 ## Text Format
 
-When developing a website, one essential element that significantly influences user experience is text formatting. Text formatting doesn't just refer to the font style, size, and color. It includes creating a definite hierarchy, highlighting essential parts, arranging content logically, and making your text human-friendly. As a web developer or designer, mastering text formatting is just as important as mastering HTML, CSS, or any other technical skill. 
+When developing a website, one essential element that significantly influences user experience is text formatting. Text formatting doesn't just refer to the font style, size, and color. It includes creating a definite hierarchy, highlighting essential parts, arranging content logically, and making your text human-friendly. As a web developer or designer, mastering text formatting is just as important as mastering HTML, CSS, or any other technical skill.
 
-Well-designed and neatly formatted text you create allows consumers to consume information effortlessly. Poorly formatted text, however, can lead to confusion, frustration, or a site visitor’s exit. For continued engagement, your content needs to be well organized and easy to follow for your reader. With well-implemented line spacing, text alignment, and typographical emphasis, such as bold and italics, you can guide your readers' attention to important content elements. 
+Well-designed and neatly formatted text you create allows consumers to consume information effortlessly. Poorly formatted text, however, can lead to confusion, frustration, or a site visitor’s exit. For continued engagement, your content needs to be well organized and easy to follow for your reader. With well-implemented line spacing, text alignment, and typographical emphasis, such as bold and italics, you can guide your readers' attention to important content elements.
 
 Varied text formatting techniques can be employed to enhance your content delivery. The first and most basic way is utilizing HTML tags. These tags include headers `<h1>` through `<h6>`, paragraph `<p>`, bold `<b>` or `<strong>`, italic `<i>` or `<em>`, and many others. Each tag signals a different text format, giving web browsers the clue on how to present each part of your content to site visitors. It’s simple yet foundational for text formatting.
 
