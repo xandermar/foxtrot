@@ -32,6 +32,12 @@ With over 20 years in software development, we specialize in building intelligen
 
 ### 🔧 Recent Projects
 
+#### **Quantum Improvements Consulting, LLC** (2024–Present)
+
+* **Drupal Architect** leading system modernization initiatives
+* Integrated **Maui .NET applications** with Drupal for seamless data flow and shared authentication
+* Developed and documented **CMS process updates and editorial procedures**, improving content governance and workflow efficiency
+
 #### **Federal Aviation Administration** (2022–Present)
 
 * Led custom Drupal 10 development for internal and public-facing systems
