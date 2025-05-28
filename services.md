@@ -13,13 +13,20 @@ At Xandermar LLC, we provide a comprehensive suite of digital solutions tailored
 
 ## 🧩 Drupal Development and Consulting
 
-With over 20 years of experience, our team offers expert Drupal development and consulting services. We provide:
+With over two decades of hands-on experience, Xandermar LLC offers expert **Drupal development and consulting services** tailored to enterprise, government, and private-sector needs. From crafting high-performance custom modules and themes to building API-first architectures with Angular or React frontends, we specialize in scalable, secure, and future-proof solutions.
 
-* Comprehensive knowledge of Drupal versions 7 through 10
-* Custom module development and site configuration
-* Strategic consulting to optimize your Drupal projects
+**Now offering full-service migration support** — we help you move your digital presence to or from Drupal and WordPress with zero data loss and minimal downtime. Whether you're migrating from static HTML, custom CMSs, or between platforms (e.g., **WordPress to Drupal** or **Drupal to WordPress**), our migration services ensure a seamless transition with clean URLs, retained SEO value, and complete content fidelity.
 
-Whether you're starting a new project or enhancing an existing one, we have the expertise to support your goals.
+**Services include:**
+
+* Full-site migrations (any CMS → Drupal/WordPress, and vice versa)
+* Data mapping, transformation, and import/export strategies
+* Automated content and media migration scripts
+* Migration of taxonomies, users, custom fields, and multilingual content
+* SEO preservation, redirect mapping, and analytics continuity
+* Post-migration audits and performance optimization
+
+Trust Xandermar LLC to deliver robust solutions that grow with your organization — whether building new or migrating the legacy.
 
 ---
 
