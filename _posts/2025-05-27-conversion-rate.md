@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Conversion Rate"
-date: 2025-05-28
+date: 2025-05-27
 categories: [digital-marketing, ecommerce, web-analytics]
 ---
 

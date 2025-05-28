@@ -1,2 +1,6 @@
 /* main style */
 
+pre.highlight {
+    background: #efefef;
+    padding: 1rem;
+}
