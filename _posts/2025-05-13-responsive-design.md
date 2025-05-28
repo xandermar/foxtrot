@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Responsive Design"
-date: 2025-05-28
+date: 2025-05-13
 categories: [web-design, responsive-design, frontend-dev]
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Config Export"
-date: 2025-05-28
+date: 2025-05-12
 categories: [web-development, coding, jekyll]
 ---
 
