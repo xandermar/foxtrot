@@ -96,7 +96,7 @@ POST_RESPONSE=$(curl -s https://api.openai.com/v1/chat/completions \
     \"model\": \"gpt-4\",
     \"messages\": [
       {\"role\": \"system\", \"content\": \"You are a technical blogger writing for a Jekyll-based site.\"},
-      {\"role\": \"user\", \"content\": \"In terms of Web Development, Design, and website project management, write a markdown-formatted blog post titled '$CAPITALIZED_TERM' using a Technical writing style. The title shall be printed first in H2 format. Paragraphs shall be a minimum of 5 sentences. Paragraphs shall not have paragraph titles.\"}
+      {\"role\": \"user\", \"content\": \"In terms of Web Development (especially Drupal Development), Design, and website project management, write a markdown-formatted blog post titled '$CAPITALIZED_TERM' using a Technical writing style. The title shall be printed first in H2 format. Paragraphs shall be a minimum of 5 sentences. Paragraphs shall not have paragraph titles.\"}
     ],
     \"max_tokens\": 1200
   }")
