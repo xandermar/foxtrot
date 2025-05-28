@@ -11,6 +11,18 @@ At Xandermar LLC, we provide a comprehensive suite of digital solutions tailored
 
 ---
 
+## 🧩 Drupal Development and Consulting
+
+With over 20 years of experience, our team offers expert Drupal development and consulting services. We provide:
+
+* Comprehensive knowledge of Drupal versions 7 through 10
+* Custom module development and site configuration
+* Strategic consulting to optimize your Drupal projects
+
+Whether you're starting a new project or enhancing an existing one, we have the expertise to support your goals.
+
+---
+
 ## 🎨 Web Design and Hosting
 
 We specialize in creating visually appealing and functional websites using Drupal or WordPress, depending on your requirements. Whether you're launching a new site or revamping an existing one, our team offers:
@@ -57,18 +69,6 @@ Streamline your development process with our Continuous Integration services. We
 * Efficient integration with platforms like GitHub or GitLab
 
 Our goal is to accelerate your development cycle while maintaining high code quality.
-
----
-
-## 🧩 Drupal Development and Consulting
-
-With over 20 years of experience, our team offers expert Drupal development and consulting services. We provide:
-
-* Comprehensive knowledge of Drupal versions 7 through 10
-* Custom module development and site configuration
-* Strategic consulting to optimize your Drupal projects
-
-Whether you're starting a new project or enhancing an existing one, we have the expertise to support your goals.
 
 ---
 
