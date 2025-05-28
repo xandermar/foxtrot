@@ -38,18 +38,18 @@ With over 20 years in software development, we specialize in building intelligen
 * Integrated **Maui .NET applications** with Drupal for seamless data flow and shared authentication
 * Developed and documented **CMS process updates and editorial procedures**, improving content governance and workflow efficiency -->
 
-#### **Federal Aviation Administration** (2022–2025)
+#### **Federal Aviation Administration**
 
 * Led custom Drupal 10 development for internal and public-facing systems
 * Integrated **Google Maps API**, Apigee proxies, RESTful endpoints
 * Implemented CI pipelines and advanced frontend functionality
 
-#### **Centers for Medicare & Medicaid Services** (2023–2025)
+#### **Centers for Medicare & Medicaid Services**
 
 * Developed secure, custom Drupal 10 modules and themes (USWDS)
 * Architected API-first architecture with Playwright test automation
 
-#### **USPS Office of Inspector General** (2020–2023)
+#### **USPS Office of Inspector General**
 
 * Built & maintained uspsoig.gov, including full relaunch
 * Developed multi-platform API solutions and TFA/MFA integration
