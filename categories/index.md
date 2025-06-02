@@ -9,7 +9,8 @@ nav_exclude: true
 <h1>All Categories</h1>
 
 <ul>
-  {% assign categories = site.categories | sort %}
+  {% assign categories = site.categories %}
+  {% assign sorted_categories = categories | sort_natural: "first" %}
   {% for category in categories %}
     {% assign category_name = category[0] %}
     <li>
