@@ -22,3 +22,4 @@ Kernel
 Alias
 Background
 Unit Test
+Schema.org
