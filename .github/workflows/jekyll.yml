@@ -48,14 +48,15 @@ jobs:
         run: |
           DAY=$(date +'%d')
           if [ "$DAY" = "01" ] || [ "$DAY" = "15" ]; then
-            echo "✅ Running post creation and category generator scripts"
+            echo "✅ Running post creation script (1st or 15th of the month)"
             chmod +x ./create_jekyll_post.sh
             ./create_jekyll_post.sh
-            chmod +x ./generate_category_pages.sh
-            ./generate_category_pages.sh
           else
             echo "🕒 Skipping post/category generation (not 1st or 15th)"
           fi
+          echo "Running category generator script"
+          chmod +x ./generate_category_pages.sh
+          ./generate_category_pages.sh
 
       - name: Commit and push new post (if any)
         env:
