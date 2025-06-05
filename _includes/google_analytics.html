@@ -1,0 +1,14 @@
+{% if jekyll.environment == "production" %}
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9FZC9PMRBR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9FZC9PMRBR');
+</script>
+<!-- End Google Analytics -->
+    {% else %}
+<!-- Google Analytics is disabled in non-production environments -->
+{% endif %}
