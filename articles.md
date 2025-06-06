@@ -7,12 +7,25 @@ nav_order: 4.1
 
 <h1>All Articles</h1>
 
-<ul>
+<div class="row">
+{% for post in site.posts %}
+<div class="card m-1 bg-light" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h5>
+    <p class="card-text"><small>Posted: ({{ post.date | date: "%B %d, %Y" }})</small></p>
+    <p class="card-text">{{ post.post_description }}</p>
+  </div>
+</div>
+{% endfor %}
+</div>
+<!-- <div class="container">
+<ul class="row">
   {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      <small>({{ post.date | date: "%B %d, %Y" }})</small>
+    <li class="m-1 col-md-3 bg-light" style="list-style: none;">
+      <div><a href="{{ post.url | relative_url }}">{{ post.title }}</a> <small>({{ post.date | date: "%B %d, %Y" }})</small></div>
+      <div>{{ post.post_description }}</div>
     </li>
   {% endfor %}
 </ul>
-<div class="mt-3">See <a href="/categories">Post Categories</a></div>
+</div> -->
+<div class="mt-3 mb-3">See <a href="/categories">Post Categories</a></div>

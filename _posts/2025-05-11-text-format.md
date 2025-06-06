@@ -3,6 +3,7 @@ layout: post
 title: "Text Format"
 date: 2025-05-11
 categories: [programming, web-development, text-format]
+post_description: "An overview of essential text formatting techniques in web development, covering HTML tags, CSS styling, and responsive design to enhance user experience and content readability."
 ---
 
 ![Image](/assets/g6167c86892eb1d26229f279440d0c4d9a63db75ef810bd821c96279c882d28e84522713b18ad1a57b2f13163ec9c8ad0834388b73b62f994af3ccea51fa0578d_1280.jpg){: .img-fluid style="max-height:720px; height:auto;" }

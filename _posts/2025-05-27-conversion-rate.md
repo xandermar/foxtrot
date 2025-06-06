@@ -3,6 +3,7 @@ layout: post
 title: "Conversion Rate"
 date: 2025-05-27
 categories: [digital-marketing, ecommerce, web-analytics]
+post_description: "An overview of conversion rate in web development, design, and project management, with tips for optimizing user actions and leveraging Drupal tools."
 ---
 
 ![Image](/assets/gdeed403a36d0b28d206d6ff5566ca2cb9e20d27a5a3585868e80c04ba676d79f7d62a3784e18819535a68cba4dae78f70d039a27ef8bba9a42a02714d7b81bae_1280.jpg){: .img-fluid style="max-height:720px; height:auto;" }

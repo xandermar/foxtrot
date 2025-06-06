@@ -88,6 +88,27 @@ CATEGORY_RESPONSE=$(curl -s https://api.openai.com/v1/chat/completions \
 
 CATEGORIES=$(echo "$CATEGORY_RESPONSE" | jq -r '.choices[0].message.content' | tr -d '[]" \n' | sed 's/,/, /g')
 
+
+
+
+
+
+
+# Get post description
+POST_DESCRIPTION_RESPONSE=$(curl -s https://api.openai.com/v1/chat/completions \
+  -H "Authorization: Bearer $OPENAI_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d "{
+    \"model\": \"gpt-4\",
+    \"messages\": [
+      {\"role\": \"system\", \"content\": \"You are a taxonomy expert for technical blog posts.\"},
+      {\"role\": \"user\", \"content\": \"Based on the topic '$CAPITALIZED_TERM', generate a sentence description for an article. Do not use double quotation marks.\"}
+    ],
+    \"max_tokens\": 50
+  }")
+
+POST_DESCRIPTION=$(echo "$POST_DESCRIPTION_RESPONSE" | jq -r '.choices[0].message.content')
+
 # Generate the blog post body
 POST_RESPONSE=$(curl -s https://api.openai.com/v1/chat/completions \
   -H "Authorization: Bearer $OPENAI_API_KEY" \
@@ -152,6 +173,7 @@ layout: post
 title: "$CAPITALIZED_TERM"
 date: $DATE
 categories: [${CATEGORIES}]
+post_description: "$POST_DESCRIPTION"
 ---
 
 $IMAGE_LINE

@@ -3,6 +3,7 @@ layout: post
 title: "Destructuring"
 date: 2025-05-23
 categories: [javascript, programming, web-development]
+post_description: "Explains JavaScript destructuring, showing how to extract values from arrays and objects for cleaner, more maintainable code."
 ---
 
 ![Image](/assets/ga9eb29595b2f76250ac5679a8c771f5a3675f2d1fdab6137f8769ddc94913f2ee8684febf8c7b6ea21fb3fcd738048aa173c03cf30f690bb5760663c8283af6c_1280.jpg){: .img-fluid style="max-height:720px; height:auto;" }

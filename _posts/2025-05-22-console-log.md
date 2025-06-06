@@ -3,6 +3,7 @@ layout: post
 title: "Console.log"
 date: 2025-05-22
 categories: [javascript, web-development, debugging]
+post_description: "A practical overview of the console.log method in JavaScript, its uses for debugging, and best practices for development and production."
 ---
 
 ![Image](/assets/gb8c2484b219e46ec1ade684b3160b7ca7dc2b867d8597dbf4626c1d61927249151d69fd21a20294e0bdf0ba36b7628685e813acda3a2c9e950a831c7e4970bcf_1280.jpg){: .img-fluid style="max-height:720px; height:auto;" }

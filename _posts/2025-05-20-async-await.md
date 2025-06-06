@@ -3,6 +3,7 @@ layout: post
 title: "Async/await"
 date: 2025-05-20
 categories: [javascript, web-development, async-await]
+post_description: "An introduction to async/await in JavaScript, explaining how it simplifies asynchronous programming and improves code readability."
 ---
 
 ![Image](/assets/g2644704a88d2d3624a720e0e7a17b3220c01ae35a7bf9686cc03dbe7a840430c36bdb0ee07576a4cbbb8558293767fc3c4c99507c54fb2eb8d35a19cc6fafe70_1280.jpg){: .img-fluid style="max-height:720px; height:auto;" }

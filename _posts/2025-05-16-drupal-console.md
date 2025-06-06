@@ -3,6 +3,7 @@ layout: post
 title: "Drupal Console"
 date: 2025-05-16
 categories: [drupal, web-development, cms-tools]
+post_description: "A summary of Drupal Console, its command-line tools for generating code, debugging, and managing Drupal sites efficiently."
 ---
 
 ![Image](/assets/g1568d9b6ae2837bfc66d7c56427e916027e92e8039b19f1f9fd2cb8740548f5fe567f5e47f732ad85c94e25009e2bea30349082c228aeb6d874f409ca8087578_1280.jpg){: .img-fluid style="max-height:720px; height:auto;" }

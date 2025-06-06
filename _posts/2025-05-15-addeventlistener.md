@@ -3,6 +3,7 @@ layout: post
 title: "Addeventlistener"
 date: 2025-05-15
 categories: [javascript, web-development, programming]
+post_description: "A detailed explanation of JavaScript's addEventListener method, its syntax, event handling capabilities, and advantages for interactive web design."
 ---
 
 ![Image](/assets/g98f691f5ea947708e91abb44d0fa87765e210d384a1cea80d30a14603512395210111fa9890f48116d4fb3c8f93d3e2c062e03945e90305a8d0adb3bb8da9ae9_1280.jpg){: .img-fluid style="max-height:720px; height:auto;" }
