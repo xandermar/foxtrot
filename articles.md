@@ -9,7 +9,7 @@ nav_order: 4.1
 
 <div class="row">
 {% for post in site.posts %}
-<div class="card m-1 bg-light" style="width: 18rem;">
+<div class="card m-1 bg-light mx-auto" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h5>
     <p class="card-text"><small>Posted: ({{ post.date | date: "%B %d, %Y" }})</small></p>
