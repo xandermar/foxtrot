@@ -35,3 +35,4 @@ Color Palette
 Term
 Geolocation Api
 Module
+Webassembly
