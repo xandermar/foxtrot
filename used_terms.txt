@@ -39,3 +39,4 @@ Webassembly
 Story Points
 Preloading
 Source Tag
+Phpstan-drupal
