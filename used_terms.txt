@@ -42,3 +42,4 @@ Source Tag
 Phpstan-drupal
 Aesthetics
 Svg
+Mink
