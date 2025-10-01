@@ -43,3 +43,4 @@ Phpstan-drupal
 Aesthetics
 Svg
 Mink
+Linter
