@@ -48,3 +48,4 @@ Source Tag
 Drupal Coding Standards
 Ctr
 Devel
+Magento
