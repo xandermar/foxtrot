@@ -49,3 +49,4 @@ Drupal Coding Standards
 Ctr
 Devel
 Magento
+Zsh
