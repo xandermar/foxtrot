@@ -50,3 +50,4 @@ Ctr
 Devel
 Magento
 Zsh
+Meta Description
