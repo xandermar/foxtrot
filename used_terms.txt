@@ -51,3 +51,4 @@ Devel
 Magento
 Zsh
 Meta Description
+Drush
