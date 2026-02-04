@@ -5,6 +5,8 @@ permalink: /articles
 nav_order: 4.1
 ---
 
+<img src="/assets/articles.jpg" alt="Xandermar LLC hero banner showing a modern workspace with a sleek digital design theme, conveying a confident and professional tone" width="1200" height="500" style="width:100%;height:350px;object-fit:cover;display:block;" loading="lazy" decoding="async" />
+
 <h1>All Articles</h1>
 
 <div class="row">
